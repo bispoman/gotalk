@@ -13,7 +13,7 @@ func GetRoutes() *mux.Router {
 
 	routes.HandleFunc("/healthcheck", controller.Healthcheck).Methods("GET")
 
-	routes.HandleFunc("/getpeople/:id", controller.GetPeople).Methods("GET")
+	routes.HandleFunc("/getpeople/{id}", controller.GetPeople).Methods("GET")
 
 	return routes
 }

@@ -16,7 +16,7 @@ func main() {
 
 	port := ":8080"
 
-	log.Info("Application has been started at port: ", port)
+	log.Info("Application has been started at port ", port)
 
 	log.Fatal(http.ListenAndServe(port, nil))
 
