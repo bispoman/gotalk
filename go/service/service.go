@@ -8,7 +8,7 @@ import (
 )
 
 func GetPeoplefromSwapi(id string) string {
-	log.Info("requesting people %s to swapi", id)
+	log.Info("requesting to swapi people ", id)
 	url := "https://swapi.dev/api/people/" + id
 	response, err := http.Get(url)
 

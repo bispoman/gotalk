@@ -24,8 +24,11 @@ func GetPeople(w http.ResponseWriter, r *http.Request) {
 	id := params["id"]
 
 	log.Info("getPeople hit, forwarding to service")
+
 	result := service.GetPeoplefromSwapi(id)
+
 	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(http.StatusOK)
+
 	fmt.Fprintf(w, result)
 }
